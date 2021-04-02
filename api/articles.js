@@ -29,7 +29,7 @@ export const addFavorite = slug => {
   })
 }
 
-  //取消点赞文章
+//取消点赞文章
 
 export const unfavorite = slug => {
   return request({
@@ -46,10 +46,61 @@ export const getArticle = slug => {
   })
 }
 
-//获取文章评论1
+//获取文章评论
 export const getComments = slug => {
   return request({
     url: `/api/articles/${slug}/comments`,
     method: 'GET'
+  })
+}
+
+//发表评论
+export const postComment = (slug, data) => {
+  return request({
+    url: `/api/articles/${slug}/comments`,
+    method: 'POST',
+    data
+  })
+}
+
+//发表文章
+export const createArticle = data => {
+  return request({
+    url: '/api/articles',
+    method: 'POST',
+    data
+  })
+}
+
+//修改/更新文章
+export const updateArticle = (slug, data) => {
+  return request({
+    url: `/api/articles/${slug}`,
+    method: 'PUT',
+    data
+  })
+}
+
+//删除文章
+export const delArticle = slug => {
+  return request({
+    url: `/api/articles/${slug}`,
+    method: 'DELETE'
+  })
+}
+
+//关注作者
+export const followUser = username => {
+  return request({
+    url: `/api/profiles/${username}/follow`,
+    method: 'POST'
+  })
+}
+
+//取消关注作者
+export const unfollowUser = username => {
+  return request({
+    url: `/api/profiles/${username}/follow`,
+    method: 'DELETE'
   })
 }
