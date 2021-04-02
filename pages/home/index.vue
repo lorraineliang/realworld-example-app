@@ -3,7 +3,7 @@
     <div class="banner">
       <div class="container">
         <h1 class="logo-font">My Blog</h1>
-        <p>A place to share your knowledge.</p>
+        <p>欢迎光临！！！热烈欢迎！！！</p>
       </div>
     </div>
 

@@ -4,10 +4,7 @@
       <div class="container">
         <div class="row">
           <div class="col-xs-12 col-md-10 offset-md-1">
-            <img
-              src="https://static.productionready.io/images/smiley-cyrus.jpg"
-              class="user-img"
-            />
+            <img :src="profile.image" class="user-img" />
             <h4>{{ urlUsername }}</h4>
             <p>{{ profile.bio }}</p>
             <template v-if="user.username === urlUsername">
