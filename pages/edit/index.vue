@@ -41,7 +41,7 @@
               <button
                 class="btn btn-lg pull-xs-right btn-primary"
                 type="button"
-                @click="publishArticle"
+                @click.prevent="publishArticle"
               >
                 Publish Article
               </button>
@@ -73,10 +73,10 @@ export default {
   computed:{
     ...mapState(['article']),
     isEdit(){
-      if(this.$route.query.slug){
-        return false
+      if(this.$route.params.slug){
+        return true
       }
-      return true
+      return false
     }
   },
   methods: {
@@ -88,8 +88,13 @@ export default {
         }
       }
       const { data } = this.isEdit ? await updateArticle(this.article.slug,params) : await createArticle(params)
-      this.articleDetail = data.article
-      this.$router.push(('/article/'+ this.articleDetail.slug))
+      if (this.isEdit) {
+        this.articleDetail = data.article
+        this.$router.push(('/article/'+ this.articleDetail.slug))
+      } else {
+        this.$router.push('/')
+      }
+      
     },
   },
   mounted() {

@@ -5,7 +5,7 @@
         <div class="col-md-6 offset-md-3 col-xs-12">
           <h1 class="text-xs-center">Your Settings</h1>
 
-          <div>
+          <form @submit.prevent="">
             <fieldset>
               <fieldset class="form-group">
                 <input
@@ -54,10 +54,10 @@
                 Update Settings
               </button>
             </fieldset>
-          </div>
+          </form>
 
           <hr />
-          <button class="btn btn-outline-danger" @click="logout">
+          <button class="btn btn-outline-danger" @click.prevent="logout">
             Or click here to logout.
           </button>
         </div>
