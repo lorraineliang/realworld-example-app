@@ -2,7 +2,7 @@
   <div class="home-page">
     <div class="banner">
       <div class="container">
-        <h1 class="logo-font">My Blog</h1>
+        <h1 class="logo-font">Lorraine Blog</h1>
         <p>欢迎光临！！！热烈欢迎！！！</p>
       </div>
     </div>
