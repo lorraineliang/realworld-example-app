@@ -56,7 +56,7 @@ module.exports = {
   server: {
     //host: 'localhost'//本地环境访问 局域网访问
     host: '0.0.0.0',//生产环境 对外访问
-    // port: 3000
+    port: 3000
   },
   plugins: [
     '~/plugins/request.js',
