@@ -7,4 +7,4 @@
 
 官方问题描述地址：https://github.com/gothinkster/realworld/issues/700
 
-项目部署地址 http://117.50.35.112:3000/
+项目部署地址： http://117.50.35.112:3000/
